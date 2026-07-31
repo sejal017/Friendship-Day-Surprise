@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Friend Report ⚠️</title>
+
+<style>
+
+tr{
+
+    opacity:0;
+
+    animation:show .6s forwards;
+
+}
+
+tr:nth-child(1){animation-delay:.2s;}
+tr:nth-child(2){animation-delay:.4s;}
+tr:nth-child(3){animation-delay:.6s;}
+tr:nth-child(4){animation-delay:.8s;}
+tr:nth-child(5){animation-delay:1s;}
+tr:nth-child(6){animation-delay:1.2s;}
+tr:nth-child(7){animation-delay:1.4s;}
+
+@keyframes show{
+
+from{
+opacity:0;
+transform:translateX(-30px);
+}
+
+to{
+opacity:1;
+transform:translateX(0);
+}
+
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Consolas,monospace;
+}
+
+body{
+    background:#101010;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:25px 0;
+    color:#00ff66;
+}
+
+.report{
+
+width:90%;
+max-width:700px;
+
+padding:30px;
+
+border:2px solid #00ff66;
+border-radius:15px;
+
+box-shadow:0 0 25px #00ff66;
+
+animation:fade 1s;
+
+max-height:90vh;
+overflow-y:auto;
+
+}
+
+h2{
+
+text-align:center;
+margin-bottom:25px;
+
+}
+
+table{
+
+width:100%;
+border-collapse:collapse;
+
+font-size:20px;
+
+}
+
+td{
+
+padding:12px;
+
+border-bottom:1px solid #00ff66;
+
+}
+
+.result{
+
+margin-top:35px;
+
+text-align:center;
+
+font-size:28px;
+
+color:#ff4fa2;
+
+font-weight:bold;
+
+text-shadow:0 0 15px #ff4fa2;
+
+animation:glow 1.5s infinite alternate;
+
+}
+
+button{
+
+margin-top:35px;
+
+padding:14px 35px;
+
+font-size:18px;
+
+background:#ff4fa2;
+
+color:white;
+
+border:none;
+
+border-radius:30px;
+
+cursor:pointer;
+
+transition:.3s;
+
+display:block;
+
+margin-left:auto;
+margin-right:auto;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 20px #ff4fa2;
+
+}
+
+.page-progress{
+
+margin-top:25px;
+
+text-align:center;
+
+font-size:14px;
+
+color:#bfbfbf;
+
+}
+
+@keyframes glow{
+
+from{
+
+text-shadow:0 0 10px #ff4fa2;
+
+}
+
+to{
+
+text-shadow:0 0 25px #ff4fa2;
+
+}
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+transform:translateY(30px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="report">
+
+<h2>📋 FRIEND REPORT</h2>
+
+<table>
+
+<tr>
+
+<td>Name</td>
+
+<td>Best Friend ❤️</td>
+
+</tr>
+
+<tr>
+
+<td>Status</td>
+
+<td>Verified ✔</td>
+
+</tr>
+
+<tr>
+
+<td>Trust</td>
+
+<td>100%</td>
+
+</tr>
+
+<tr>
+
+<td>Support</td>
+
+<td>∞</td>
+
+</tr>
+
+<tr>
+
+<td>Happiness</td>
+
+<td>+999</td>
+
+</tr>
+
+<tr>
+
+<td>Memories</td>
+
+<td>Unlimited ♾️</td>
+
+</tr>
+
+<tr>
+
+<td>Replacement</td>
+
+<td>Not Available ❌</td>
+
+</tr>
+
+</table>
+
+<div class="result">
+
+⭐ NO REPLACEMENT FOUND ⭐
+
+</div>
+
+<button onclick="location.href='page5.html'">
+
+Continue ➜
+
+</button>
+
+<div class="page-progress">
+
+Page 4 of 7
+
+<br><br>
+
+❤️ ❤️ ❤️ ❤️ 🤍 🤍 🤍
+
+</div>
+
+</div>
+
+</body>
+
+</html>

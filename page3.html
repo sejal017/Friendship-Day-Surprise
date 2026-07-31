@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🤖 AI Friendship Scanner 🤖</title>
+
+<style>
+
+.verified{
+    color:#ff4fa2;
+    font-size:28px;
+    font-weight:bold;
+    text-align:center;
+    text-shadow:0 0 10px #ff4fa2;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow:0 0 8px #ff4fa2;
+    }
+    to{
+        text-shadow:0 0 25px #ff4fa2;
+    }
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Consolas,monospace;
+}
+
+body{
+    background:#0b0b0b;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    padding:30px 0;   /* 👈 add this */
+    color:#00ff66;
+}
+
+.scanner{
+    width:90%;
+    max-width:700px;
+
+    padding:30px;
+
+    border:2px solid #00ff66;
+    border-radius:15px;
+
+    box-shadow:0 0 25px #00ff66;
+
+    max-height:90vh;      /* 👈 NEW */
+    overflow-y:auto;      /* 👈 NEW */
+}
+
+h2{
+
+text-align:center;
+
+margin-bottom:25px;
+
+}
+
+.progress-text{
+    text-align:center;
+    color:#00ff66;
+    font-size:18px;
+    margin-bottom:10px;
+}
+
+.bar{
+
+height:100%;
+width:0%;
+background:#00ff66;
+
+}
+
+#result{
+
+line-height:35px;
+
+font-size:20px;
+
+white-space:pre-line;
+
+}
+
+button{
+
+display:none;
+
+margin-top:30px;
+
+padding:14px 35px;
+
+background:#ff4fa2;
+
+color:white;
+
+border:none;
+
+border-radius:30px;
+
+font-size:18px;
+
+cursor:pointer;
+
+transition:.3s;
+
+}
+
+button:hover{
+
+transform:scale(1.05);
+
+box-shadow:0 0 20px #ff4fa2;
+
+}
+
+.page-progress{
+
+margin-top:25px;
+
+text-align:center;
+
+color:#bfbfbf;
+
+font-size:14px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="scanner">
+
+<h2>🤖 AI FRIENDSHIP SCANNER 🤖</h2>
+
+<div class="progress-text" id="percent">
+Scanning... 0%
+</div>
+
+<div class="progress">
+    <div class="bar"></div>
+</div>
+
+<div id="result"></div>
+
+<button onclick="location.href='page4.html'">
+
+Continue ➜
+
+</button>
+
+<div class="page-progress">
+
+Page 3 of 7
+
+<br><br>
+
+❤️ ❤️ ❤️ 🤍 🤍 🤍 🤍
+
+</div>
+
+</div>
+
+<script>
+
+const bar=document.querySelector(".bar");
+
+const percent=document.getElementById("percent");
+
+const result=document.getElementById("result");
+
+const button=document.querySelector("button");
+
+let width=0;
+
+let load=setInterval(function(){
+
+width++;
+
+bar.style.width=width+"%";
+
+percent.innerHTML = "Scanning... " + width + "%";
+
+if(width>=100){
+
+clearInterval(load);
+
+percent.innerHTML = "✅ Scan Complete";
+
+scan();
+
+}
+
+},30);
+
+const lines=[
+
+"✔ Detecting Heart...",
+
+"✔ Checking Kindness...",
+
+"✔ Loading Memories...",
+
+"✔ Verifying Loyalty...",
+
+"✔ Analyzing Craziness...",
+
+"",
+
+'<div class="verified">❤️ BEST FRIEND VERIFIED ❤️</div>',
+
+"",
+
+"Trust Score : 100%",
+
+"Friendship Level : ∞"
+
+];
+
+function scan(){
+
+let i=0;
+
+let typing=setInterval(function(){
+
+result.innerHTML+=lines[i]+"<br>";
+
+i++;
+
+if(i==lines.length){
+
+clearInterval(typing);
+
+button.style.display="inline-block";
+
+}
+
+},700);
+
+}
+
+</script>
+
+</body>
+
+</html>
