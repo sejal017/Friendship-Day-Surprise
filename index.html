@@ -194,7 +194,13 @@ window.onload = function () {
 };
 
 function startPage() {
-    location.href = "page2.html";
+    const music = document.getElementById("bgMusic");
+
+    music.play().catch(() => {});
+
+    setTimeout(() => {
+        location.href = "page2.html";
+    }, 200);
 }
 
 </script>
