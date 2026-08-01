@@ -254,6 +254,14 @@ next.style.display="inline-block";
 
 }
 
+  const music = document.getElementById("bgMusic");
+
+window.onload = function () {
+    music.play().catch(() => {
+        console.log("Autoplay blocked");
+    });
+};
+
 </script>
 
 </body>
