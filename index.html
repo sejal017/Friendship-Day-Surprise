@@ -155,47 +155,49 @@ opacity:1;
 
 <script>
 
-const text="Initializing Friendship System...";
-let i=0;
+const text = "Initializing Friendship System...";
+let i = 0;
 
-function type(){
-
-if(i<text.length){
-document.getElementById("typing").innerHTML+=text.charAt(i);
-i++;
-setTimeout(type,70);
-}
-
+function type() {
+    if (i < text.length) {
+        document.getElementById("typing").innerHTML += text.charAt(i);
+        i++;
+        setTimeout(type, 70);
+    }
 }
 
 type();
 
-for(let j=0;j<30;j++){
+for (let j = 0; j < 30; j++) {
 
-let h=document.createElement("div");
+    let h = document.createElement("div");
 
-h.className="heart";
+    h.className = "heart";
 
-h.innerHTML=Math.random()>0.5?"❤️":"🌸";
+    h.innerHTML = Math.random() > 0.5 ? "❤️" : "🌸";
 
-h.style.left=Math.random()*100+"%";
+    h.style.left = Math.random() * 100 + "%";
 
-h.style.animationDuration=(5+Math.random()*6)+"s";
+    h.style.animationDuration = (5 + Math.random() * 6) + "s";
 
-h.style.fontSize=(20+Math.random()*25)+"px";
+    h.style.fontSize = (20 + Math.random() * 25) + "px";
 
-document.body.appendChild(h);
+    document.body.appendChild(h);
 
 }
+
+const music = document.getElementById("bgMusic");
+
+window.onload = function () {
+    music.play().catch(() => {
+        console.log("Autoplay blocked");
+    });
+};
 
 function startPage() {
-    const music = document.getElementById("bgMusic");
-
-    music.play().catch(() => {});
-
     location.href = "page2.html";
 }
-    
+
 </script>
 
 </body>
