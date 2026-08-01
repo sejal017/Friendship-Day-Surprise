@@ -176,16 +176,19 @@ width:100%;
 
 <body>
 
+<audio id="bgMusic" controls>
+    <source src="music.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+</audio>
+
 <div class="final">
 
 <h2>💖 FINAL MESSAGE 💖</h2>
 
 <div id="result"></div>
 
-<button onclick="location.href='index.html'">
-
+<button id="visitBtn" onclick="location.href='index.html'">
 💌 Visit Again
-
 </button>
 
 <div class="page-progress">
@@ -204,7 +207,7 @@ Page 7 of 7
 
 const result=document.getElementById("result");
 
-const button=document.querySelector("button");
+const button = document.getElementById("visitBtn");
 
 const lines=[
 
