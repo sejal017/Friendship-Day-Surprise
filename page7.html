@@ -1,124 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>💖Happy Friendship Day💖</title>
+<title>💖 Final Message 💖</title>
 
 <style>
-
-.page-progress{
-
-    margin-top:25px;
-
-    text-align:center;
-
-    color:white;
-
-    font-size:14px;
-
-    letter-spacing:2px;
-
-}
-
-.welcome-title{
-    font-size:40px;
-    animation:zoom 2s infinite alternate;
-}
-
-@keyframes zoom{
-    from{
-        transform:scale(1);
-    }
-    to{
-        transform:scale(1.08);
-    }
-}
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:Consolas,monospace;
 }
 
 body{
-height:100vh;
+background:linear-gradient(135deg,#ff9acb,#b58cff,#8ec5ff);
+
 display:flex;
 justify-content:center;
 align-items:center;
-background:linear-gradient(135deg,#ff9ecf,#d4a5ff,#87cefa);
-overflow:hidden;
+
+overflow-y:auto;
+
+min-height:100vh;
+
+padding:30px 0;
+
+color:#333;
 }
 
-.card{
+.final{
+
 width:90%;
-max-width:450px;
-padding:40px;
-background:rgba(255,255,255,.15);
-backdrop-filter:blur(15px);
-border-radius:25px;
+max-width:700px;
+
+padding:30px;
+
+background:rgba(255,255,255,.18);
+backdrop-filter:blur(12px);
+
+border:2px solid rgba(255,255,255,.45);
+
+border-radius:20px;
+
+box-shadow:0 0 30px rgba(255,255,255,.35);
+
+max-height:90vh;
+overflow-y:auto;
+
+}
+
+h2{
 text-align:center;
-color:white;
-box-shadow:0 0 25px rgba(0,0,0,.2);
-animation:fade 1.2s;
+margin-bottom:25px;
+color:#ffffff;
+text-shadow:0 0 10px rgba(0,0,0,.25);
 }
 
-h1{
-font-size:35px;
-margin-bottom:15px;
-}
-
-#typing{
+#result{
+white-space:pre-line;
 font-size:20px;
-height:40px;
-margin-bottom:30px;
+line-height:35px;
+color:#ffffff;
 }
 
 button{
-padding:15px 40px;
-font-size:18px;
+
+display:none;
+
+margin-top:30px;
+
+padding:14px 35px;
+
+background:#ff4fa2;
+
+color:white;
+
 border:none;
-border-radius:40px;
-background:white;
-color:#ff4f9a;
+
+border-radius:30px;
+
+font-size:18px;
+
 cursor:pointer;
+
 transition:.3s;
-font-weight:bold;
+
 }
 
 button:hover{
-transform:scale(1.08);
+
+transform:scale(1.05);
+
+box-shadow:0 0 20px #ff4fa2;
+
 }
 
-@keyframes fade{
+.page-progress{
+margin-top:30px;
+text-align:center;
+color:#ffffff;
+font-size:14px;
+}
+
+.final-text{
+color:#fff;
+font-size:26px;
+font-weight:bold;
+text-align:center;
+text-shadow:0 0 15px #ff4fa2;
+}
+
+@keyframes glow{
+
 from{
-opacity:0;
-transform:translateY(40px);
+text-shadow:0 0 10px #ff69b4;
 }
+
 to{
-opacity:1;
-transform:translateY(0);
+text-shadow:0 0 25px #ff69b4;
 }
+
+}
+
+@media(max-width:600px){
+
+#result{
+font-size:18px;
+line-height:30px;
+}
+
+h2{
+font-size:26px;
+}
+
+button{
+width:100%;
+}
+
 }
 
 .heart{
-position:absolute;
-font-size:25px;
-animation:float 8s linear infinite;
+    position:fixed;
+    top:110vh;
+    pointer-events:none;
+    z-index:999;
+    animation:float 8s linear forwards;
 }
 
 @keyframes float{
 
 0%{
-transform:translateY(100vh);
-opacity:0;
+    transform:translateY(0) rotate(0deg);
+    opacity:0;
+}
+
+15%{
+    opacity:1;
 }
 
 100%{
-transform:translateY(-120vh);
-opacity:1;
+    transform:translateY(-130vh) rotate(360deg);
+    opacity:0;
 }
 
 }
@@ -129,61 +176,149 @@ opacity:1;
 
 <body>
 
-<div class="card">
+<div class="final">
 
-<h1 class="welcome-title">💖 Welcome 💖</h1>
+<h2>💖 FINAL MESSAGE 💖</h2>
 
-<div id="typing"></div>
+<div id="result"></div>
 
-<button onclick="location.href='page2.html'">
-Start 🚀
+<button onclick="location.href='index.html'">
+
+💌 Visit Again
+
 </button>
+
 <div class="page-progress">
 
-    Page 1 of 7
+Page 7 of 7
 
-    <br><br>
+<br><br>
 
-    ❤️ 🤍 🤍 🤍 🤍 🤍 🤍
+❤️ ❤️ ❤️ ❤️ ❤️ ❤️ ❤️
 
 </div>
+
 </div>
 
 <script>
 
-const text="Initializing Friendship System...";
+const result=document.getElementById("result");
+
+const button=document.querySelector("button");
+
+const lines=[
+
+"Initializing Final Message...",
+
+"",
+
+"Loading Beautiful Memories...",
+
+"",
+
+"✔ Friendship Status : Forever ❤️",
+
+"✔ Trust Level : Infinite ♾️",
+
+"✔ Smile Generator : Activated 😊",
+
+"",
+
+'<div class="final-text">🎉 HAPPY FRIENDSHIP DAY 🎉</div>',
+
+"",
+
+"💖 Thank You For Being",
+
+"The Best Friend In My Life.",
+
+"",
+
+"No matter how much we fight,",
+
+"I'll always be lucky to have you.",
+
+"",
+
+"Our Friendship = Forever ♾️❤️",
+
+"",
+
+"✨ Friendship isn't about",
+
+"who you've known the longest...",
+
+"It's about who never left",
+
+"your side. ❤️",
+
+"",
+
+"Made with ❤️ & Lots of Memories",
+
+"~ Sejal 🌸"
+
+];
+
 let i=0;
 
-function type(){
+function typing(){
 
-if(i<text.length){
-document.getElementById("typing").innerHTML+=text.charAt(i);
+if(i<lines.length){
+
+result.innerHTML+=lines[i]+"<br>";
+
 i++;
-setTimeout(type,70);
+
+setTimeout(typing,700);
+
+}
+else{
+
+button.style.display="inline-block";
+
 }
 
 }
 
-type();
+typing();
 
-for(let j=0;j<30;j++){
+const emojis=["💖","🌸","✨","💗"];
 
-let h=document.createElement("div");
+function createEmoji(){
 
-h.className="heart";
+const item=document.createElement("div");
 
-h.innerHTML=Math.random()>0.5?"❤️":"🌸";
+item.className="heart";
 
-h.style.left=Math.random()*100+"%";
+item.innerHTML=emojis[Math.floor(Math.random()*emojis.length)];
 
-h.style.animationDuration=(5+Math.random()*6)+"s";
+item.style.left=Math.random()*100+"vw";
 
-h.style.fontSize=(20+Math.random()*25)+"px";
+item.style.fontSize=(20+Math.random()*20)+"px";
 
-document.body.appendChild(h);
+item.style.animationDuration=(5+Math.random()*4)+"s";
+
+document.body.appendChild(item);
+
+setTimeout(function(){
+item.remove();
+},9000);
 
 }
+
+setInterval(createEmoji,350);
+
+window.onload = function () {
+
+    window.scrollTo(0, 0);
+
+    document.body.style.overflowY = "auto";
+
+};
+
 </script>
 
 </body>
+
 </html>
