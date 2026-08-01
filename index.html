@@ -188,6 +188,15 @@ h.style.fontSize=(20+Math.random()*25)+"px";
 document.body.appendChild(h);
 
 }
+
+const music = document.getElementById("bgMusic");
+
+window.onload = function () {
+    music.play().catch(() => {
+        console.log("Autoplay blocked");
+    });
+};
+    
 </script>
 
 </body>
