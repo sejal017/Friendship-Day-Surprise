@@ -139,8 +139,8 @@ opacity:1;
 
 <div id="typing"></div>
 
-<button onclick="location.href='page2.html'">
-Start 🚀
+<button onclick="startPage()">
+    Start 🚀
 </button>
 <div class="page-progress">
 
@@ -188,24 +188,14 @@ document.body.appendChild(h);
 
 }
 
-const music = document.getElementById("bgMusic");
+function startPage() {
+    const music = document.getElementById("bgMusic");
 
-window.onload = function () {
-    music.play().catch(() => {
-        console.log("Autoplay blocked");
-    });
-};
+    music.play().catch(() => {});
+
+    location.href = "page2.html";
+}
     
-</script>
-
-    <script>
-const music = document.getElementById("bgMusic");
-
-window.onload = function () {
-    music.play().catch(() => {
-        console.log("Autoplay blocked");
-    });
-};
 </script>
 
 </body>
