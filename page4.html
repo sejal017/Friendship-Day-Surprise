@@ -297,4 +297,14 @@ Page 4 of 7
 
 </body>
 
+    <script>
+        const music = document.getElementById("bgMusic");
+
+window.onload = function () {
+    music.play().catch(() => {
+        console.log("Autoplay blocked");
+    });
+};
+    </script>
+
 </html>
